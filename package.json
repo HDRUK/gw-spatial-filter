@@ -1,0 +1,45 @@
+{
+  "name": "gw-spatial-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "ts-node-dev --trace-warnings --respawn --watch src,db,swagger,test src/server.ts",
+    "dev2": "nodemon -L src/server.ts",
+    "build": "tsc",
+    "start": "node dist/src/main.js",
+    "build:start": "tsc && node dist/server.js",
+    "lint": "eslint -c './.eslintrc' --fix './src/**/*.ts'",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "prettier:check": "prettier --config .prettierrc.json --check 'src/**/*.ts'",
+    "prettier:format": "prettier --config .prettierrc.json 'src/**/*.ts' --write",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/bigquery": "^5.9.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "response-time": "^2.3.2",
+    "simple-gcp-logging": "git+https://github.com/HDRUK/simple-gcp-logging.git#main",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
+    "ts-node-dev": "^1.1.8"
+  }
+}
