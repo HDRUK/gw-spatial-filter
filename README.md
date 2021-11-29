@@ -66,9 +66,11 @@ for filter_value = 1234
 }
 ```
 
+#### Google Cloud permissions
+check permissions in your project for `Google Logging` and `Google BigQuery`
+
 #### Google Local - configuration
 
 - Download `GCloud` SDK: `https://cloud.google.com/sdk/docs/install`;
-- check for permissions in your project for Google Logging and Google BigQuery;
 - initialize Cloud SDK: `https://cloud.google.com/sdk/docs/initializing`;
 - Authorizing Cloud SDK tools: `https://cloud.google.com/sdk/docs/authorizing`;
