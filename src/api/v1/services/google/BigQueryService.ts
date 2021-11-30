@@ -17,7 +17,6 @@ export default class BigQueryService {
     }
 
     async query() {
-        console.log(`BigQueryService `, this._query);
         const options = {
             query: this._query,
         };
@@ -29,9 +28,7 @@ export default class BigQueryService {
             // Wait for the query to finish
             const [rows] = await job.getQueryResults();
 
-            // Print the results
             return rows;
-            // rows.forEach(row => console.log(row));
         } catch (err) {
             throw new Error((<Error>err).message);
         }
