@@ -18,7 +18,10 @@ const host: string = process.env.HOST || '';
 const bodyParser = require('body-parser');
 
 app.use(json());
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    methods: ["GET"]
+}));
 app.use(responseTime());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -29,5 +32,5 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server started at ${host}`);
+    process.stdout.write(`Server started at ${host}\n`);
 });
